@@ -36,4 +36,4 @@
 
 ### Créateur 
 
-#### BearCub29 en collab avec Husatttt
+#### [BearCub29](https://github.com/BearCub29) en collab avec [Husain_KHATBA](https://github.com/khatba)
