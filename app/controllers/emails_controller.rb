@@ -4,9 +4,10 @@ class EmailsController < ApplicationController
   end
 
   def create
+    
     @email = Email.new
     puts "*" * 100
-    @email = Email.new(object: Faker::Lorem.word , body: Faker::Lorem.paragraphs, read: false)
+    @email = Email.new(object: Faker::Marketing.buzzwords , body: Faker::ChuckNorris.fact, read: false)
     if @email.save
     puts "#" * 100
       respond_to do |format|

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <% if @email.read == true %>
+      <div class="col-3 border rounded">
+        <%= link_to email.object, email_path(email.id), remote: true, class: "text-danger font-weight-bold" %>
+      </div>
+      <div class="col-1 border bg-info rounded">
+        <i class="far fa-envelope  text-white "></i>
+      </div>
+      <div class="col-8 border text-danger rounded">
+        <%= email.body %>
+      </div>
+    <% else %>
+      <div class="col-3 border rounded">
+        <%= link_to email.object, email_path(email.id), remote: true, class: "text-info font-weight-bold" %>
+      </div>
+      <div class="col-1 border bg-info rounded">
+        <i class="far fa-envelope  text-white "></i>
+      </div>
+      <div class="col-8 border text-info rounded">
+        <%= email.body %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

@@ -1,35 +1,54 @@
 <div class="container" id="demo">
-
+<div class="d-flex align-items-center p-3 my-3 text-white-50 bg-info rounded shadow-sm">
+<%= image_tag "bublle.png", class: "mr-3 text-white", width: "48", height: "48" %>
+    
+    <div class="lh-100">
+      <h6 class="mb-0 text-white lh-100">BubleMail</h6>
+      <small>Since Yesterday</small>
+    </div>
+  </div>
   <div class="row justify-content-center">
-      <%= link_to 'New Email', emails_path, class: "btn btn-success btn-block col-2",method: 'post', remote: true %>
+      <%= link_to 'New Email', emails_path, class: "btn btn-primary btn-block col-2",method: 'post', remote: true %>
   </div>
   <br>
 
-  <div class="row">
-    <div class="col-4 border bg-info text-white">
+  <div class="row text-center">
+    <div class="col-3 border bg-info text-white rounded">
       object
     </div>
-    <div class="col-8 border bg-info text-white">
+    <div class="col-1 border bg-info text-white rounded">
+    read
+    </div>
+    <div class="col-8 border bg-info text-white rounded">
       body
     </div>
+
   </div>
 
   <% @emails.each do |email| %>
   <% if email.read == true %>
  
-  <div class="row" id="<%= email.id %>">
-  <div class="col-4 border">
-    <%= link_to email.object, email_path(email.id),class: "text-danger font-weight-bold", remote: true %>
+  <div class="row text-center" id="<%= email.id %>">
+  <div class="col-3 border rounded">
+    <%= link_to email.object, email_path(email.id),class: "text-danger font-weight-bold", remote: true %> 
   </div>
-  <div class="col-8 border">
+  <div class="col-1 border bg-info rounded">
+  <i class="far fa-envelope-open  text-white"></i>
+    </div>
+  <div class="col-8 border text-danger rounded">
+  <%= email.body %>
   </div>
 
   <% else %>
-    <div class="row" id="<%= email.id %>">
-    <div class="col-4 border">
-      <%= link_to email.object, email_path(email.id), remote: true , class: "font-weight-bold text-info" %>
+    <div class="row text-center" id="<%= email.id %>">
+    <div class="col-3 border rounded">
+      <%= link_to email.object, email_path(email.id), remote: true , class: "font-weight-bold text-info" %> 
     </div>
-    <div class="col-8 border">
+    <div class="col-1 border bg-info rounded">
+    <i class="far fa-envelope  text-white "></i>
+    </div>
+    <div class="col-8 border text-info rounded">
+    <%= email.body %>
     </div>
   <% end %>
 

@@ -1,10 +1,11 @@
-demo = document.getElementById("<%= @email.id %>");
-
+var demo = document.getElementById("<%= @email.id %>");
 demo.innerHTML = '<%= j render 'showemail', email: @email %>';
 demo.style.color = "red";
+<%= @email.update(read: true) %>
 
-demo.addEventListener('click', function(){
-  <%= @email.update(read: true) %>
+var croix = document.getElementsByClassName('close')[0];
+croix.addEventListener('click', function(){
+  demo.innerHTML = '<%= j render 'newemail2', email: @email %>';
 })
 
 
