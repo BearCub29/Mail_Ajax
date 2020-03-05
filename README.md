@@ -1,24 +1,39 @@
-# README
+# README BUBBLE Mail
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Bienvenue sur votre service de mail tout en réaction (et propre #Ajax)
 
-Things you may want to cover:
+### Connexion
 
-* Ruby version
+* Deux choix possibles :
+  * Via Heroku est le lien suivant : [Bubble mail](https://buble-mail.herokuapp.com/)
+  * En téléchargeant ou clonant se repo via le bouton vert en haut de se repos
 
-* System dependencies
+### Fonctionnement
 
-* Configuration
+#### Heroku 
 
-* Database creation
+* Créer un compte via Sign up
+* Cliquez le sur le lien Email dans la navbar 
+* Profiter de l'éxpérience 
 
-* Database initialization
+### Via serveur local
 
-* How to run the test suite
+* Une fois dans le dossier avec votre terminal :
+  * Un `bundle install`
+  * Un `rails db:create`
+  * Un `rails db:migrate`
+  * Un `rails db:seed`
+  * Enfin un `rails server`
+* Ensuite allez ici : [Bubble mail](http://localhost:3000/)
+  * Créer un compte via Sign up
+  * Cliquez le sur le lien Email dans la navbar 
+  * Profiter de l'éxpérience 
 
-* Services (job queues, cache servers, search engines, etc.)
+### Software
 
-* Deployment instructions
+#### Ruby and Ruby on Rails
+#### Pack de différentes Gems
 
-* ...
+### Créateur 
+
+#### BearCub29 en collab avec Husatttt
