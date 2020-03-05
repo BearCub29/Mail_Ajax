@@ -1,0 +1,5 @@
+<% if @email.read == true %>
+<%= link_to "Unread", email_path(read: false), class: "btn btn-info", remote: true, method: "put" %>
+<% else %>
+<%= link_to "Read", email_path(read: true), class: "btn btn-info", remote: true, method: "put" %>
+<% end %>

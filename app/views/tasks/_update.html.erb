@@ -1,0 +1,5 @@
+<% if task.status %>
+<%= check_box_tag :name, 1, true, id: "demo",data: { remote: true, url: task_path(task.id), params: { id: task.id, status: "true" }.to_param, method: "put" }%>
+<% else %>
+<%= check_box_tag :name, 1, false, id: "demo",data: { remote: true, url: task_path(task.id), params: { id: task.id, status: "true" }.to_param, method: "put" }%>
+<% end %>

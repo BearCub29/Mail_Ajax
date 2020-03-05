@@ -1,0 +1,39 @@
+<div class="container" id="demo">
+
+  <div class="row justify-content-center">
+      <%= link_to 'New Email', emails_path, class: "btn btn-success btn-block col-2",method: 'post', remote: true %>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-4 border bg-info text-white">
+      object
+    </div>
+    <div class="col-8 border bg-info text-white">
+      body
+    </div>
+  </div>
+
+  <% @emails.each do |email| %>
+  <% if email.read == true %>
+ 
+  <div class="row" id="<%= email.id %>">
+  <div class="col-4 border">
+    <%= link_to email.object, email_path(email.id),class: "text-danger font-weight-bold", remote: true %>
+  </div>
+  <div class="col-8 border">
+  </div>
+
+  <% else %>
+    <div class="row" id="<%= email.id %>">
+    <div class="col-4 border">
+      <%= link_to email.object, email_path(email.id), remote: true , class: "font-weight-bold text-info" %>
+    </div>
+    <div class="col-8 border">
+    </div>
+  <% end %>
+
+</div>
+<% end %>
+
+</div>

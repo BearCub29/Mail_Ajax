@@ -1,0 +1,4 @@
+demo = document.getElementById("<%= @email.id %>");
+demo.classList.toggle("text-info");
+
+document.getElementById("btnread").innerHTML = "<%= j render 'update', email: @email %>";
